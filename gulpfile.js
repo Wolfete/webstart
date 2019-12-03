@@ -16,3 +16,16 @@ gulp.task('browser-sync', function() {
     });
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
+
+
+let gulp = require('gulp');
+let cleanCSS = require('gulp-clean-css');
+let sourcemaps = require('gulp-sourcemaps');
+ 
+gulp.task('minify-css',() => {
+  return gulp.src('./src/*.css')
+    .pipe(sourcemaps.init())
+    .pipe(cleanCSS())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('dist'));
+});
