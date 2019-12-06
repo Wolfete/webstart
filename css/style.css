@@ -355,6 +355,21 @@ template {
 .contacts__phone {
   margin-right: 45px; }
 
+.hero {
+  position: relative;
+  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  height: 100vh;
+  color: #fff; }
+  .hero__instagram {
+    positon: absolute;
+    left: 0;
+    top: 0;
+    max-width: 80px;
+    height: 100%; }
+
+.instagram {
+  background-color: #131313; }
+
 body {
   font-family: 'Futura Book', sans-serif;
   font-size: 14px; }
